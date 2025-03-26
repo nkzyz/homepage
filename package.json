@@ -5,7 +5,9 @@
   "main": "server/server.js",
   "scripts": {
     "hotloader": "webpack serve --config ./webpack.config.js --mode development --port 5050",
-    "start": "nodemon"
+    "start": "nodemon",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages-d build"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/weblab-workshops/catbook-react/issues"
   },
-  "homepage": "https://github.com/weblab-workshops/catbook-react#readme",
+  "homepage": "https://nkzyz.github.io/homepage/",
   "engines": {
     "node": ">=18.x"
   },
@@ -45,6 +47,7 @@
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^4.5.0",
     "react-hot-loader": "^4.13.0",
     "style-loader": "^2.0.0",
